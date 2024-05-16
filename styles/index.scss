@@ -1,0 +1,19 @@
+@import "header";
+@import "main";
+@import "footer";
+
+@use "fonts";
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: #fff;
+   font-family: fonts.$main-font;
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: normal;
+}
