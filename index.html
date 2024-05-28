@@ -3,123 +3,166 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Portfolio Frontend Developer" />
       <title>Daniela Y. Zagal - Portfolio</title>
-      <link rel="stylesheet" href="./style.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+      <link rel="stylesheet" href="./styles/index.css" />
+
       <script
          src="https://kit.fontawesome.com/a14db3a8ab.js"
          crossorigin="anonymous"></script>
    </head>
    <body>
-      <header>
-         <section class="headline">
-            <h3><span>PORTFOLIO:</span> Daniela Y. Zagal</h3>
-            <h1>Front End Developer</h1>
-            <h2>+ designer</h2>
-         </section>
-         <div class="links">
-            <a
-               href="https://www.linkedin.com/in/daniela-y-zagal/"
-               target="_blank"
-               ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-            <a href="https://github.com/danielaayz"
-               ><i class="fa-brands fa-github"></i
-            ></a>
-         </div>
-         <img src="images/portrait.jpg" alt="portrait" />
-      </header>
-      <main>
-         <section class="summary-section">
-            <p>
-               Hi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-               quas, ipsum dolorem molestiae distinctio libero.
-            </p>
-         </section>
-
-         <section class="tech-section">
-            <h1>TECH</h1>
-            <p>
-               HTML, CSS, Flexbox, JavaScript, API:s, mob-programming,
-               pair-programming, Github
-            </p>
-         </section>
-
-         <section class="projects-section">
-            <h1>Featured projects</h1>
-            <div class="featured-projects">
-               <div class="projects">
-                  <img src="" alt="" />
-                  <h3>Game App with API</h3>
-                  <p>
-                     Responsive web site build in React using open trivia API
-                  </p>
-                  <div class="tech-used">
-                     <span class="techniques">HTML</span>
-                     <span class="techniques">CSS</span>
-                     <span class="techniques">React</span>
-                     <span class="techniques">API</span>
-                  </div>
-               </div>
-               <div class="project">
-                  <img src="" alt="" />
-                  <h3>Lorem ipsum dolor sit amet.</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
-                  <div class="tech-used">
-                     <span class="techniques">HTML</span>
-                     <span class="techniques">CSS</span>
-                     <span class="techniques">JavaScript</span>
-                  </div>
-               </div>
+      <div class="wrapper">
+         <!--header and navigation-->
+         <header>
+            <div class="nav-container" id="nav-bar">
+               <a href="index.html"
+                  ><span
+                     ><h1 class="heading-name">
+                        PORTFOLIO:Daniela Y. Zagal
+                     </h1></span
+                  >
+               </a>
+               <nav class="nav">
+                  <ul class="nav__list">
+                     <li class="nav__list"><a href="nav__link">About Me</a></li>
+                     <li class="nav__list"><a href="nav__link">My Work</a></li>
+                     <li class="nav__list">
+                        <a href="nav__link">My Experience</a>
+                     </li>
+                     <li class="nav__list">
+                        <a href="nav__link">Contact Me</a>
+                     </li>
+                  </ul>
+               </nav>
             </div>
-            <h2>Other Projects</h2>
-            <h3>Project name</h3>
-            <h3>Project name</h3>
-            <h3>Project name</h3>
-            <h3>Project name</h3>
-         </section>
 
-         <section class="thoughts-section">
-            <h1>My thoughts</h1>
-         </section>
+            <section class="headline">
+               <h1>Front End Developer</h1>
+               <h2>+ designer</h2>
+            </section>
+            <div class="links">
+               <a
+                  href="https://www.linkedin.com/in/daniela-y-zagal/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin-in"></i
+               ></a>
+               <a href="https://github.com/danielaayz"
+                  ><i class="fa-brands fa-github"></i
+               ></a>
+            </div>
+            <img src="images/portrait.jpg" alt="portrait" />
+         </header>
+         <!--end header and navigation-->
+         <main>
+            <section class="summary-section">
+               <p>
+                  I'm a Front End Developer with a BFA in Design. I'm drawn to
+                  the endless possibilites of code.
+               </p>
 
-         <section class="skills-section">
-            <h1>Skills</h1>
-            <h3>Code</h3>
-            <ul>
-               <li>HTML5</li>
-               <li>CSS3</li>
-               <li>Javascript ES6</li>
-               <li>React</li>
-               <li>GitHub</li>
-            </ul>
-            <h3>Toolbox</h3>
-            <ul>
-               <li>Prepros</li>
-               <li>Lorem.</li>
-               <li>Lorem, ipsum.</li>
-               <li>Lorem, ipsum dolor.</li>
-               <li>Lorem, ipsum.</li>
-            </ul>
-            <h3>More</h3>
-            <ul>
-               <li>Adobe Suite</li>
-               <li>Slack</li>
-            </ul>
-         </section>
+               <p>
+                  My passion is on the frontend (HTML, CSS, SaSS Bootstrap
+                  JavaScript, React).
+               </p>
 
-         <section class="more-section">
-            <h1>For more</h1>
-            <a href="linkedin">Linkedin</a>
-            <a href="linkedin">Github</a>
-            <a href="linkedin">Stackoverflow</a>
-         </section>
-      </main>
+               <p>My background in design means</p>
 
-      <footer>
-         <h2>Contact</h2>
-         <p>Daniela Y. Zagal</p>
-         <p>+46 70 751 98 55</p>
-         <p>hello@danielayz.com</p>
-      </footer>
+               <p>
+                  Excited to blend my eye for detail, passion for
+                  problem-solving, and love for design in this dynamic world of
+                  technology.
+               </p>
+            </section>
+
+            <section class="tech-section">
+               <h1>TECH</h1>
+               <p>
+                  HTML, CSS, Flexbox, JavaScript, API:s, mob-programming,
+                  pair-programming, Github
+               </p>
+            </section>
+
+            <section class="projects-section">
+               <h1>Featured projects</h1>
+               <div class="featured-projects">
+                  <div class="projects">
+                     <img src="" alt="" />
+                     <h3>Game App with API</h3>
+                     <p>
+                        Responsive web site build in React using open trivia API
+                     </p>
+                     <div class="tech-used">
+                        <span class="techniques">HTML</span>
+                        <span class="techniques">CSS</span>
+                        <span class="techniques">React</span>
+                        <span class="techniques">API</span>
+                     </div>
+                  </div>
+                  <div class="project">
+                     <img src="" alt="" />
+                     <h3>Lorem ipsum dolor sit amet.</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur.</p>
+                     <div class="tech-used">
+                        <span class="techniques">HTML</span>
+                        <span class="techniques">CSS</span>
+                        <span class="techniques">JavaScript</span>
+                     </div>
+                  </div>
+               </div>
+               <h2>Other Projects</h2>
+               <h3>Project name</h3>
+               <h3>Project name</h3>
+               <h3>Project name</h3>
+               <h3>Project name</h3>
+            </section>
+
+            <section class="thoughts-section">
+               <h1>My thoughts</h1>
+            </section>
+
+            <section class="skills-section">
+               <h1>Skills</h1>
+               <h3>Code</h3>
+               <ul>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Javascript ES6</li>
+                  <li>React</li>
+                  <li>GitHub</li>
+               </ul>
+               <h3>Toolbox</h3>
+               <ul>
+                  <li>Prepros</li>
+                  <li>Lorem.</li>
+                  <li>Lorem, ipsum.</li>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li>Lorem, ipsum.</li>
+               </ul>
+               <h3>More</h3>
+               <ul>
+                  <li>Adobe Suite</li>
+                  <li>Slack</li>
+               </ul>
+            </section>
+
+            <section class="more-section">
+               <h1>For more</h1>
+               <a href="linkedin">Linkedin</a>
+               <a href="linkedin">Github</a>
+               <a href="linkedin">Stackoverflow</a>
+            </section>
+         </main>
+
+         <footer>
+            <h2>Contact</h2>
+            <p>Daniela Y. Zagal</p>
+            <p>+46 70 751 98 55</p>
+            <p>hello@danielayz.com</p>
+         </footer>
+      </div>
    </body>
 </html>
