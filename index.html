@@ -17,34 +17,46 @@
    <body>
       <div class="wrapper">
          <!--header and navigation-->
-         <header>
+         <header id="header">
             <div class="nav-container" id="nav-bar">
-               <a href="index.html"
-                  ><span
-                     ><h1 class="heading-name">
-                        PORTFOLIO:Daniela Y. Zagal
-                     </h1></span
-                  >
-               </a>
+               <a href="index.html" class="nav__link"
+                  ><h1 class="heading-logo">
+                     <span>PORTFOLIO:</span> Daniela Y. Zagal
+                  </h1></a
+               >
+
                <nav class="nav">
                   <ul class="nav__list">
-                     <li class="nav__list"><a href="nav__link">About Me</a></li>
-                     <li class="nav__list"><a href="nav__link">My Work</a></li>
                      <li class="nav__list">
-                        <a href="nav__link">My Experience</a>
+                        <a href="#aboutme" class="btn nav__link">About Me</a>
                      </li>
                      <li class="nav__list">
-                        <a href="nav__link">Contact Me</a>
+                        <a href="#mywork" class="btn nav__link">My Work</a>
+                     </li>
+                     <li class="nav__list">
+                        <a href="#myexperience" class="btn nav__link"
+                           >My Experience</a
+                        >
+                     </li>
+                     <li class="nav__list">
+                        <a href="#contactme" class="btn nav__link"
+                           >Contact Me</a
+                        >
                      </li>
                   </ul>
                </nav>
             </div>
-
-            <section class="headline">
-               <h1>Front End Developer</h1>
-               <h2>+ designer</h2>
-            </section>
-            <div class="links">
+         </header>
+         <!--end header and navigation-->
+         <main>
+            <div class="container">
+               <section class="container__hero">
+                  <h1 class="container__first-heading">Front End Developer</h1>
+                  <h2 class="container__second-heading">+ designer</h2>
+               </section>
+               <div>
+                  <!-- TODO: move social media icons to header, next to logo/name -->
+                  <!-- <div class="links">
                <a
                   href="https://www.linkedin.com/in/daniela-y-zagal/"
                   target="_blank"
@@ -53,73 +65,98 @@
                <a href="https://github.com/danielaayz"
                   ><i class="fa-brands fa-github"></i
                ></a>
+            </div> -->
+                  <img
+                     class="profile-picture"
+                     src="images/portrait.jpg"
+                     alt="portrait" />
+               </div>
             </div>
-            <img src="images/portrait.jpg" alt="portrait" />
-         </header>
-         <!--end header and navigation-->
-         <main>
-            <section class="summary-section">
-               <p>
-                  I'm a Front End Developer with a BFA in Design. I'm drawn to
-                  the endless possibilites of code.
-               </p>
+            <div class="container-info">
+               <section class="container-info__card" id="#aboutme">
+                  <h3 class="container-heading">About Me</h3>
+                  <p class="container-info__text">
+                     Hello! I'm a creative problem solver and versatile Front
+                     End Developer with a BFA in design. I'm drawn to the
+                     endless possibilities of code and passionate about writing
+                     clean, functional, and error-free code. My goal is to not
+                     only enhance user experiences but also add tangible value
+                     to projects through my work.
+                  </p>
 
-               <p>
-                  My passion is on the frontend (HTML, CSS, SaSS Bootstrap
-                  JavaScript, React).
-               </p>
+                  <p class="container-info__text">
+                     My passion is on the Front End (HTML, CSS, SaSS, Bootstrap,
+                     JavaScript, React). I am also interested in back-end
+                     development, allowing me to build comprehensive and robust
+                     applications.
+                  </p>
 
-               <p>My background in design means</p>
+                  <p class="container-info__text">
+                     My background in design means I bring a unique perspective
+                     to development, blending aesthetics with functionality. I
+                     have a deep understanding of design principles and
+                     user-centric approaches, honed through my education and
+                     professional experience.
+                  </p>
 
-               <p>
-                  Excited to blend my eye for detail, passion for
-                  problem-solving, and love for design in this dynamic world of
-                  technology.
-               </p>
-            </section>
+                  <p class="container-info__text">
+                     Excited to blend my eye for detail, passion for
+                     problem-solving, and love for design in the dynamic world
+                     of technology.
+                  </p>
+               </section>
 
-            <section class="tech-section">
-               <h1>TECH</h1>
-               <p>
-                  HTML, CSS, Flexbox, JavaScript, API:s, mob-programming,
-                  pair-programming, Github
-               </p>
-            </section>
-
-            <section class="projects-section">
-               <h1>Featured projects</h1>
-               <div class="featured-projects">
-                  <div class="projects">
-                     <img src="" alt="" />
-                     <h3>Game App with API</h3>
-                     <p>
-                        Responsive web site build in React using open trivia API
-                     </p>
-                     <div class="tech-used">
-                        <span class="techniques">HTML</span>
-                        <span class="techniques">CSS</span>
-                        <span class="techniques">React</span>
-                        <span class="techniques">API</span>
-                     </div>
-                  </div>
-                  <div class="project">
-                     <img src="" alt="" />
-                     <h3>Lorem ipsum dolor sit amet.</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur.</p>
-                     <div class="tech-used">
-                        <span class="techniques">HTML</span>
-                        <span class="techniques">CSS</span>
-                        <span class="techniques">JavaScript</span>
-                     </div>
+               <section class="container-info__tech">
+                  <h3 class="container-heading">Tech</h3>
+                  <p>
+                     HTML, CSS, Flexbox, JavaScript, API:s, mob-programming,
+                     pair-programming, Git, Github
+                  </p>
+               </section>
+            </div>
+            <div class="container-grid">
+               <div id="item1">
+                  <h3 class="container-heading">Featured projects</h3>
+               </div>
+               <div id="item2">
+                  <img src="#" alt="" />
+                  <h3>Game App with API</h3>
+                  <p>
+                     Responsive web site build in React.js using open trivia API
+                  </p>
+                  <div class="tech-used">
+                     <span class="techniques">HTML</span>
+                     <span class="techniques">CSS</span>
+                     <span class="techniques">React</span>
+                     <span class="techniques">API</span>
                   </div>
                </div>
-               <h2>Other Projects</h2>
-               <h3>Project name</h3>
-               <h3>Project name</h3>
-               <h3>Project name</h3>
-               <h3>Project name</h3>
-            </section>
-
+               <div div="item3">
+                  <img src="#" alt="" />
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="tech-used">
+                     <span class="techniques">HTML</span>
+                     <span class="techniques">CSS</span>
+                     <span class="techniques">JavaScript</span>
+                  </div>
+               </div>
+               <div div="item4">
+                  <img src="#" alt="" />
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="tech-used">
+                     <span class="techniques">HTML</span>
+                     <span class="techniques">CSS</span>
+                     <span class="techniques">JavaScript</span>
+                  </div>
+               </div>
+               <!-- <h2>Other Projects</h2>
+                  <h3>Project name</h3>
+                  <h3>Project name</h3>
+                  <h3>Project name</h3>
+                  <h3>Project name</h3> -->
+            </div>
             <section class="thoughts-section">
                <h1>My thoughts</h1>
             </section>
@@ -164,5 +201,6 @@
             <p>hello@danielayz.com</p>
          </footer>
       </div>
+      <script src="./scripts/index.js"></script>
    </body>
 </html>

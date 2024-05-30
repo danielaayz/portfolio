@@ -1,0 +1,30 @@
+.container-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-template-areas:
+      "item1 item1 item1"
+      "item2 item3 item4";
+   gap: 1rem;
+
+   &__item2 {
+      background-color: #fffcf8;
+      border: 1px solid #606060;
+   }
+}
+
+#item1 {
+   grid-area: item1;
+}
+
+#item2 {
+   grid-area: item2;
+}
+
+#item3 {
+   grid-area: item3;
+}
+
+#item4 {
+   grid-area: item4;
+}
