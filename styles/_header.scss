@@ -5,25 +5,41 @@ $hover-color: #ffd829;
 $focus-color: #a8e6cf;
 $active-color: #ffcc00;
 
-header {
+.header {
    position: fixed;
    top: 0;
    width: 100%;
    background: #fffaf6;
-   transition: top 0.3s;
-   border-bottom: 1px solid black;
+   transition: transform 0.4s ease-in-out;
+   overflow: hidden;
+   border-bottom: 1px solid #333;
+
+   &__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+   }
+
+   &__logo {
+      font-family: fonts.$title-font;
+      font-size: 1.5rem;
+      color: #333;
+      text-decoration: none;
+      margin: 0;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+         transform: scale(1.02);
+      }
+   }
+
+   &__logo-span {
+      font-weight: 400;
+   }
 }
 
-header.hidden {
-   top: -100px; /* Adjust this value based on header height */
-}
-
-.nav-container {
-   //    height: 20vh;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 20px;
+.header.hidden {
+   transform: translateY(-100%);
 }
 
 .btn {
@@ -47,25 +63,24 @@ header.hidden {
 }
 
 .nav {
-   width: 100%;
-   max-width: 610px;
+   display: flex;
 
    &__list {
-      list-style: none;
       display: flex;
-      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   &__item {
+      margin-left: 1rem;
    }
 
    &__link {
       text-decoration: none;
       color: $link-color;
       transition: background-color 0.3s;
-      transition-duration: 0.3s;
    }
-}
-
-header h1 span {
-   font-weight: 400;
 }
 
 .heading-logo {
