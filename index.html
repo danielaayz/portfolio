@@ -3,8 +3,8 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Portfolio Frontend Developer" />
-      <title>Daniela Y. Zagal - Portfolio</title>
+      <meta name="description" content="Portfolio Front End Developer" />
+      <title>Portfolio: Daniela Y. Zagal</title>
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
@@ -15,65 +15,54 @@
          crossorigin="anonymous"></script>
    </head>
    <body>
-      <div class="wrapper">
-         <!--header and navigation-->
-         <header id="header">
-            <div class="nav-container" id="nav-bar">
+      <!--header and navigation-->
+      <header class="header" id="header">
+         <div class="header__container" id="header-bar">
+            <div class="header__logo">
                <a href="index.html" class="nav__link"
-                  ><h1 class="heading-logo">
-                     <span>PORTFOLIO:</span> Daniela Y. Zagal
+                  ><h1 class="header__logo">
+                     <span class="header__logo-span">PORTFOLIO:</span>
+                     Daniela Y. Zagal
                   </h1></a
                >
-
-               <nav class="nav">
-                  <ul class="nav__list">
-                     <li class="nav__list">
-                        <a href="#aboutme" class="btn nav__link">About Me</a>
-                     </li>
-                     <li class="nav__list">
-                        <a href="#mywork" class="btn nav__link">My Work</a>
-                     </li>
-                     <li class="nav__list">
-                        <a href="#myexperience" class="btn nav__link"
-                           >My Experience</a
-                        >
-                     </li>
-                     <li class="nav__list">
-                        <a href="#contactme" class="btn nav__link"
-                           >Contact Me</a
-                        >
-                     </li>
-                  </ul>
-               </nav>
             </div>
-         </header>
-         <!--end header and navigation-->
+            <nav class="nav">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#aboutme" class="btn nav__link">About Me</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#mywork" class="btn nav__link">My Work</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#myexperience" class="btn nav__link"
+                        >My Experience</a
+                     >
+                  </li>
+                  <li class="nav__item">
+                     <a href="#contactme" class="btn nav__link">Contact Me</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <!--end header and navigation-->
+      <div class="wrapper">
          <main>
-            <div class="container">
-               <section class="container__hero">
-                  <h1 class="container__first-heading">Front End Developer</h1>
-                  <h2 class="container__second-heading">+ designer</h2>
-               </section>
-               <div>
-                  <!-- TODO: move social media icons to header, next to logo/name -->
-                  <!-- <div class="links">
-               <a
-                  href="https://www.linkedin.com/in/daniela-y-zagal/"
-                  target="_blank"
-                  ><i class="fa-brands fa-linkedin-in"></i
-               ></a>
-               <a href="https://github.com/danielaayz"
-                  ><i class="fa-brands fa-github"></i
-               ></a>
-            </div> -->
-                  <img
-                     class="profile-picture"
-                     src="images/portrait.jpg"
-                     alt="portrait" />
+            <section class="intro">
+               <!-- instead of intro__text -->
+               <div class="intro__heading">
+                  <h1 class="intro__heading">Front End<br />Developer</h1>
+                  <h2 class="intro__subheading">+ designer</h2>
                </div>
-            </div>
+               <img
+                  class="intro__image"
+                  src="images/portrait.jpg"
+                  alt="portrait" />
+            </section>
+
             <div class="container-info">
-               <section class="container-info__card" id="#aboutme">
+               <section class="container-info__card" id="aboutme">
                   <h3 class="container-heading">About Me</h3>
                   <p class="container-info__text">
                      Hello! I'm a creative problem solver and versatile Front
@@ -100,66 +89,101 @@
                   </p>
 
                   <p class="container-info__text">
-                     Excited to blend my eye for detail, passion for
-                     problem-solving, and love for design in the dynamic world
-                     of technology.
+                     When I'm not at the computer, I'm usually outdoors
+                     exploring the city or nature, reading, spending time with
+                     my partner and our son.
                   </p>
                </section>
 
-               <section class="container-info__tech">
+               <!-- <section class="container-info__tech">
                   <h3 class="container-heading">Tech</h3>
                   <p>
                      HTML, CSS, Flexbox, JavaScript, API:s, mob-programming,
                      pair-programming, Git, Github
                   </p>
-               </section>
+               </section> -->
             </div>
-            <div class="container-grid">
-               <div id="item1">
-                  <h3 class="container-heading">Featured projects</h3>
-               </div>
-               <div id="item2">
-                  <img src="#" alt="" />
-                  <h3>Game App with API</h3>
-                  <p>
-                     Responsive web site build in React.js using open trivia API
-                  </p>
-                  <div class="tech-used">
-                     <span class="techniques">HTML</span>
-                     <span class="techniques">CSS</span>
-                     <span class="techniques">React</span>
-                     <span class="techniques">API</span>
+
+            <section class="projects">
+               <div class="projects__grid">
+                  <div id="item1">
+                     <h3 class="container-heading">Selected Work</h3>
                   </div>
+
+                  <!-- card 1 -->
+                  <article class="card" id="item2">
+                     <h3 class="card__heading">Quiz Time</h3>
+                     <p class="card__subheading">
+                        A trivia game build with React.js.
+                     </p>
+                     <div class="card__line"></div>
+                     <a
+                        href="https://ezgsnyrt.github.io/group-project-react/"
+                        target="_blank">
+                        <img
+                           class="card__image"
+                           src="./images/quiz-time-img.png"
+                           alt="Quiz Time image link"
+                     /></a>
+                     <div class="card__category">
+                        <h4 class="card__category-text">Front End / UI</h4>
+                        <div class="card__arrow">
+                           <img src="./images/arrow.svg" alt="arrow icon" />
+                        </div>
+                     </div>
+                     <div class="card__line"></div>
+                     <div class="card__tags">
+                        <span class="card__tag">HTML</span>
+                        <span class="card__tag">CSS</span>
+                        <span class="card__tag">React.js</span>
+                        <span class="card__tag">API</span>
+                        <span class="card__tag">Figma</span>
+                     </div>
+                  </article>
+
+                  <!-- card 2 -->
+                  <article class="card" div="item3">
+                     <h3 class="card__heading">Bhromaon Travel</h3>
+                     <p class="card__subheading">
+                        Responsive web site development within a narrow
+                        timeline.
+                     </p>
+                     <div class="card__line"></div>
+                     <img
+                        class="card__image"
+                        src="./images/bhromaon-img.jpg"
+                        alt="Bhromaon image link" />
+
+                     <h4 class="card__category">Front End</h4>
+                     <div class="card__line"></div>
+                     <div class="card__tags">
+                        <span class="card__tag">HTML</span>
+                        <span class="card__tag">CSS</span>
+                        <span class="card__tag">SASS</span>
+                        <span class="card__tag">JavaScript</span>
+                        <span class="card__tag">Figma</span>
+                     </div>
+                  </article>
+
+                  <!-- card 3 -->
+                  <article class="card" div="item4">
+                     <h3 class="card__heading">Genesis Portfolio</h3>
+                     <p class="card__subheading">
+                        A responsive website based on a design in Figma
+                     </p>
+                     <div class="card__line"></div>
+                     <img class="card__image" src="#" alt="" />
+                     <div class="card__line"></div>
+                     <div class="card__tags">
+                        <span class="card__tag">HTML</span>
+                        <span class="card__tag">CSS</span>
+                        <span class="card__tag">SASS</span>
+                        <span class="card__tag">JavaScript</span>
+                     </div>
+                  </article>
                </div>
-               <div div="item3">
-                  <img src="#" alt="" />
-                  <h3>Lorem ipsum dolor sit amet.</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
-                  <div class="tech-used">
-                     <span class="techniques">HTML</span>
-                     <span class="techniques">CSS</span>
-                     <span class="techniques">JavaScript</span>
-                  </div>
-               </div>
-               <div div="item4">
-                  <img src="#" alt="" />
-                  <h3>Lorem ipsum dolor sit amet.</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
-                  <div class="tech-used">
-                     <span class="techniques">HTML</span>
-                     <span class="techniques">CSS</span>
-                     <span class="techniques">JavaScript</span>
-                  </div>
-               </div>
-               <!-- <h2>Other Projects</h2>
-                  <h3>Project name</h3>
-                  <h3>Project name</h3>
-                  <h3>Project name</h3>
-                  <h3>Project name</h3> -->
-            </div>
-            <section class="thoughts-section">
-               <h1>My thoughts</h1>
             </section>
+            <!-- end of grid -->
 
             <section class="skills-section">
                <h1>Skills</h1>
@@ -192,15 +216,90 @@
                <a href="linkedin">Github</a>
                <a href="linkedin">Stackoverflow</a>
             </section>
+
+            <section class="contact">
+               <div class="contact__wrapper">
+                  <h2 class="contact__heading">Get In Touch</h2>
+                  <p class="contact__text">
+                     Hey there, my inbox is always open. Whether you have a
+                     question or just want to say hi, I'll try my best to get
+                     back to you!
+                  </p>
+                  <form class="contact__form" action="form.php" method="POST">
+                     <div class="contact__form-group">
+                        <label for="name" class="contact__form-label"
+                           >Your Name</label
+                        >
+                        <input
+                           type="text"
+                           id="name"
+                           class="contact__form-input"
+                           placeholder="Enter your name"
+                           required />
+                        <!-- </div>
+                     <div class="contact__form-group"> -->
+                        <label for="email" class="contact__form-label"
+                           >Email adress</label
+                        >
+                        <input
+                           type="email"
+                           id="email"
+                           class="contact__form-input"
+                           placeholder="Enter your email adress"
+                           required />
+                        <!-- </div>
+                     <div class="contact__form-group"> -->
+                        <label for="subject" class="contact__form-label"
+                           >Subject</label
+                        >
+                        <input
+                           type="text"
+                           id="subject"
+                           class="contact__form-input"
+                           placeholder="Subject"
+                           required />
+                        <!-- </div>
+                     <div class="contact__form-group"> -->
+                        <label for="message" class="contact__form-label"
+                           >Message</label
+                        >
+                        <textarea
+                           id="message"
+                           class="contact__form-input contact__form-textarea"
+                           rows="5"
+                           placeholder="Type your message..."
+                           required></textarea>
+                     </div>
+                     <button type="submit" class="contact__form-button">
+                        Send
+                     </button>
+                  </form>
+               </div>
+            </section>
          </main>
 
          <footer>
-            <h2>Contact</h2>
-            <p>Daniela Y. Zagal</p>
-            <p>+46 70 751 98 55</p>
-            <p>hello@danielayz.com</p>
+            <nav class="footer__nav">
+               <ol>
+                  <li><a href="">About Me</a></li>
+                  <li><a href="">Featured Projects</a></li>
+                  <li><a href="">Skills</a></li>
+                  <li><a href="">Contact</a></li>
+               </ol>
+            </nav>
+            <p class="footer__copyright">Copyright © 2023 Daniela Y. Zagal</p>
+            <div class="footer__icons">
+               <a
+                  href="https://www.linkedin.com/in/daniela-y-zagal/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin-in"></i
+               ></a>
+               <a href="https://github.com/danielaayz"
+                  ><i class="fa-brands fa-github"></i
+               ></a>
+            </div>
          </footer>
+         <script src="./scripts/index.js"></script>
       </div>
-      <script src="./scripts/index.js"></script>
    </body>
 </html>
