@@ -1,0 +1,43 @@
+.container-skills {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 64px 0;
+   padding: 32px 32px;
+   border-radius: 10px;
+   border: 1px solid #606060;
+   background: #fffcf8;
+
+   &__section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+   }
+
+   &__card-section {
+      max-width: 250px;
+      width: 100%;
+   }
+
+   &__subheading {
+      margin: 40px 0;
+      font-size: 1.5rem;
+   }
+
+   &__list {
+      list-style-type: none;
+   }
+
+   &__item {
+      margin-bottom: 16px;
+   }
+
+   &__sublist {
+      list-style-type: none;
+   }
+
+   &__subitem {
+      margin-left: 16px;
+   }
+}

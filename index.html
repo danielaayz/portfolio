@@ -20,10 +20,10 @@
          <div class="header__container" id="header-bar">
             <div class="header__logo">
                <a href="index.html" class="nav__link"
-                  ><h1 class="header__logo">
+                  ><div class="header__logo">
                      <span class="header__logo-span">PORTFOLIO:</span>
                      Daniela Y. Zagal
-                  </h1></a
+                  </div></a
                >
             </div>
             <nav class="nav">
@@ -94,17 +94,9 @@
                      my partner and our son.
                   </p>
                </section>
-
-               <!-- <section class="container-info__tech">
-                  <h3 class="container-heading">Tech</h3>
-                  <p>
-                     HTML, CSS, Flexbox, JavaScript, API:s, mob-programming,
-                     pair-programming, Git, Github
-                  </p>
-               </section> -->
             </div>
 
-            <section class="projects">
+            <section class="projects" id="mywork">
                <div class="projects__grid">
                   <div id="item1">
                      <h3 class="container-heading">Selected Work</h3>
@@ -114,7 +106,8 @@
                   <article class="card" id="item2">
                      <h3 class="card__heading">Quiz Time</h3>
                      <p class="card__subheading">
-                        A trivia game build with React.js.
+                        A trivia game build with React.js. This was part of a
+                        collaborate effort.
                      </p>
                      <div class="card__line"></div>
                      <a
@@ -122,13 +115,20 @@
                         target="_blank">
                         <img
                            class="card__image"
-                           src="./images/quiz-time-img.png"
+                           src="./images/quiz-time-img.jpg"
                            alt="Quiz Time image link"
                      /></a>
                      <div class="card__category">
                         <h4 class="card__category-text">Front End / UI</h4>
                         <div class="card__arrow">
-                           <img src="./images/arrow.svg" alt="arrow icon" />
+                           <a
+                              href="https://ezgsnyrt.github.io/group-project-react/"
+                              target="_blank"
+                              ><img
+                                 class="card__arrow-icon"
+                                 src="./images/arrow.svg"
+                                 alt="arrow icon"
+                           /></a>
                         </div>
                      </div>
                      <div class="card__line"></div>
@@ -142,7 +142,7 @@
                   </article>
 
                   <!-- card 2 -->
-                  <article class="card" div="item3">
+                  <article class="card" id="item3">
                      <h3 class="card__heading">Bhromaon Travel</h3>
                      <p class="card__subheading">
                         Responsive web site development within a narrow
@@ -153,8 +153,19 @@
                         class="card__image"
                         src="./images/bhromaon-img.jpg"
                         alt="Bhromaon image link" />
-
-                     <h4 class="card__category">Front End</h4>
+                     <div class="card__category">
+                        <h4 class="card__category-text">Front End</h4>
+                        <div class="card__arrow">
+                           <a
+                              href="https://ezgsnyrt.github.io/group-project-react/"
+                              target="_blank"
+                              ><img
+                                 class="card__arrow-icon"
+                                 src="./images/arrow.svg"
+                                 alt="arrow icon"
+                           /></a>
+                        </div>
+                     </div>
                      <div class="card__line"></div>
                      <div class="card__tags">
                         <span class="card__tag">HTML</span>
@@ -166,13 +177,29 @@
                   </article>
 
                   <!-- card 3 -->
-                  <article class="card" div="item4">
+                  <article class="card" id="item4">
                      <h3 class="card__heading">Genesis Portfolio</h3>
                      <p class="card__subheading">
                         A responsive website based on a design in Figma
                      </p>
                      <div class="card__line"></div>
-                     <img class="card__image" src="#" alt="" />
+                     <img
+                        class="card__image"
+                        src="./images/genesis-img.jpg"
+                        alt="Bhromaon image link" />
+                     <div class="card__category">
+                        <h4 class="card__category-text">Front End</h4>
+                        <div class="card__arrow">
+                           <a
+                              href="https://ezgsnyrt.github.io/group-project-react/"
+                              target="_blank"
+                              ><img
+                                 class="card__arrow-icon"
+                                 src="./images/arrow.svg"
+                                 alt="arrow icon"
+                           /></a>
+                        </div>
+                     </div>
                      <div class="card__line"></div>
                      <div class="card__tags">
                         <span class="card__tag">HTML</span>
@@ -185,30 +212,129 @@
             </section>
             <!-- end of grid -->
 
-            <section class="skills-section">
-               <h1>Skills</h1>
-               <h3>Code</h3>
-               <ul>
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>Javascript ES6</li>
-                  <li>React</li>
-                  <li>GitHub</li>
-               </ul>
-               <h3>Toolbox</h3>
-               <ul>
-                  <li>Prepros</li>
-                  <li>Lorem.</li>
-                  <li>Lorem, ipsum.</li>
-                  <li>Lorem, ipsum dolor.</li>
-                  <li>Lorem, ipsum.</li>
-               </ul>
-               <h3>More</h3>
-               <ul>
-                  <li>Adobe Suite</li>
-                  <li>Slack</li>
-               </ul>
-            </section>
+            <!-- START skills section -->
+            <article class="container-skills" id="myexperience">
+               <h3 class="container-heading">Education and Work Experience</h3>
+               <div class="container-skills__section">
+                  <section class="container-skills__card-section">
+                     <h2 class="container-skills__subheading">Education</h2>
+                     <ul class="container-skills__list">
+                        <li class="container-skills__item">
+                           Sundsgårdens Folkhögskola
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">2024</li>
+                              <li class="container-skills__subitem">
+                                 Frontend Development
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="container-skills__item">
+                           Beckmans School of Design
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">
+                                 2007 - 2010
+                              </li>
+                              <li class="container-skills__subitem">
+                                 Product and Spatial Design
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="container-skills__item">
+                           London Metropolitan University
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">
+                                 2005 - 2006
+                              </li>
+                              <li class="container-skills__subitem">
+                                 Foundation into Architecture and Interior
+                                 Design
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="container-skills__item">
+                           Stockholm University
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">
+                                 2004 - 2005
+                              </li>
+                              <li class="container-skills__subitem">
+                                 Art History
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </section>
+
+                  <section class="container-skills__card-section">
+                     <h2 class="container-skills__subheading">Work</h2>
+                     <ul class="container-skills__list">
+                        <li class="container-skills__item">
+                           IKEA Umeå, Sweden
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">
+                                 Aug. 2023 - Apr. 2024
+                              </li>
+                              <li class="container-skills__subitem">
+                                 B2B Interior Designer
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="container-skills__item">
+                           IKEA Nagakute, Nagoya, Japan
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">
+                                 Sept. 2017 - Oct. 2017
+                              </li>
+                              <li class="container-skills__subitem">
+                                 Interior Designer (build up)
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="container-skills__item">
+                           IKEA Umeå, Sweden
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">
+                                 Nov. 2015 - July 2023
+                              </li>
+                              <li class="container-skills__subitem">
+                                 Interior Designer
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="container-skills__item">
+                           Design Lab S.
+                           <ul class="container-skills__sublist">
+                              <li class="container-skills__subitem">
+                                 Apr. 2013 - Aug. 2014
+                              </li>
+                              <li class="container-skills__subitem">
+                                 Design Teacher
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </section>
+
+                  <section class="container-skills__card-section">
+                     <h2 class="container-skills__subheading">Skills</h2>
+                     <ul class="container-skills__list">
+                        <li class="container-skills__item">Office 365</li>
+                        <li class="container-skills__item">OS/Mac</li>
+                        <li class="container-skills__item">
+                           HTML5, CSS3, Sass, JavaScript ES6, Bootstrap,
+                           React.js and Git/GitHub
+                        </li>
+                        <li class="container-skills__item">WordPress</li>
+                        <li class="container-skills__item">
+                           Adobe Photoshop, Illustrator, InDesign
+                        </li>
+                        <li class="container-skills__item">
+                           I speak fluent Swedish, English and Spanish
+                        </li>
+                     </ul>
+                  </section>
+               </div>
+            </article>
 
             <section class="more-section">
                <h1>For more</h1>
