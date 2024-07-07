@@ -13,6 +13,7 @@ $active-color: #ffcc00;
    transition: transform 0.4s ease-in-out;
    overflow: hidden;
    border-bottom: 1px solid #333;
+   z-index: 1;
 
    &__container {
       display: flex;
@@ -24,6 +25,7 @@ $active-color: #ffcc00;
    &__logo {
       font-family: fonts.$title-font;
       font-size: 1.5rem;
+      font-weight: bold;
       color: #333;
       text-decoration: none;
       margin: 0;

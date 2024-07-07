@@ -1,19 +1,27 @@
+@use "fonts";
+
 @import "header";
 @import "main";
 @import "footer";
-
-@use "fonts";
 
 * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   scroll-behavior: smooth;
 }
 
 body {
-   background-color: #fff;
+   background-color: #fffaf6;
    font-family: fonts.$main-font;
+   font-style: normal;
    font-weight: 400;
    font-size: 1rem;
-   line-height: normal;
+   color: #333;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }

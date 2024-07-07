@@ -5,10 +5,10 @@ document.addEventListener("scroll", function () {
    const currentScrollY = window.scrollY;
 
    if (currentScrollY > lastScrollY && currentScrollY > 200) {
-      // Scrolling down and past 200px
+      // scrolling down and past 200px
       header.classList.add("hidden");
    } else {
-      // Scrolling up or above 200px
+      // scrolling up or above 200px
       header.classList.remove("hidden");
    }
 

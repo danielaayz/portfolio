@@ -35,9 +35,9 @@ main {
 
 .container-heading {
    font-family: fonts.$title-font;
-   font-size: 1.5rem;
+   font-size: 2rem;
    font-weight: bold;
-   margin: 25px 0;
+   margin: 0;
 }
 
 .container-info {
@@ -74,4 +74,5 @@ main {
 }
 
 @import "grid";
+@import "experience";
 @import "contact";
