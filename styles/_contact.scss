@@ -1,4 +1,5 @@
 @use "fonts";
+@use "header";
 
 .contact {
    display: flex;
@@ -8,6 +9,11 @@
    border-radius: 10px;
    border: 1px solid #606060;
    background: #fffcf8;
+   transition: transform 0.4s ease-in-out;
+   transform: scale(1);
+   &:hover {
+      transform: scale(1.02);
+   }
 
    &__wrapper {
       padding: 1rem;
@@ -55,14 +61,20 @@
       }
 
       &-button {
-         padding: 0.5rem 1rem;
-         border: none;
-         color: white;
+         background: #fff;
+         padding: 10px 20px;
+         border-radius: 35px;
+         border: 1px solid #000;
+         letter-spacing: 0.1rem;
+         font-weight: 500;
          cursor: pointer;
 
-         //   &:hover {
-         //      background: hsl(37, 90%, 51%);
-         //   }
+         &:hover {
+            background: hsl(37, 90%, 51%);
+         }
+         &:active {
+            background: header.$active-color;
+         }
       }
    }
 }
