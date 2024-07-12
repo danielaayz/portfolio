@@ -52,13 +52,30 @@
             <section class="intro">
                <!-- instead of intro__text -->
                <div class="intro__heading">
+                  <h2 class="intro__subheading">Daniela Y. Zagal</h2>
                   <h1 class="intro__heading">Front End<br />Developer</h1>
                   <h2 class="intro__subheading">+ designer</h2>
                </div>
-               <img
-                  class="intro__image"
-                  src="images/portrait.jpg"
-                  alt="portrait" />
+               <div class="intro__content">
+                  <div class="intro__links">
+                     <a
+                        class="icon_link"
+                        href="https://github.com/danielaayz"
+                        target="_blank">
+                        <i class="fa-brands fa-github"></i
+                     ></a>
+                     <a
+                        class="icon_link"
+                        href="https://www.linkedin.com/in/daniela-y-zagal/"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i
+                     ></a>
+                  </div>
+                  <img
+                     class="intro__image"
+                     src="images/portrait.jpg"
+                     alt="portrait" />
+               </div>
             </section>
 
             <div class="container-info">
@@ -73,13 +90,6 @@
                      Bootstrap, JavaScript, React), and I have a growing
                      interest in back-end development, allowing me to create
                      comprehensive and robust applications.
-                  </p>
-
-                  <p class="container-info__text">
-                     My passion is on the Front End (HTML, CSS, SaSS, Bootstrap,
-                     JavaScript, React). I am also interested in back-end
-                     development, allowing me to build comprehensive and robust
-                     applications.
                   </p>
 
                   <p class="container-info__text">
@@ -102,7 +112,7 @@
 
                   <p class="container-info__text">
                      Beyond coding, I love exploring the city or nature,
-                     reading, and spending time with my partner and our son.
+                     reading, and spending time with my family.
                   </p>
                </section>
             </div>
@@ -163,6 +173,7 @@
                         <span class="card__tag">HTML</span>
                         <span class="card__tag">CSS</span>
                         <span class="card__tag">React.js</span>
+                        <span class="card__tag">Node.js</span>
                         <span class="card__tag">API</span>
                         <span class="card__tag">Figma</span>
                      </div>
@@ -273,6 +284,7 @@
                         <span class="card__tag">CSS</span>
                         <span class="card__tag">SASS</span>
                         <span class="card__tag">JavaScript</span>
+                        <span class="card__tag">Figma</span>
                      </div>
                   </article>
                </div>
@@ -439,78 +451,77 @@
                </div>
             </article>
 
-            <section class="more-section">
-               <h1>For more</h1>
-               <a href="linkedin">Linkedin</a>
-               <a href="linkedin">Github</a>
-               <a href="linkedin">Stackoverflow</a>
-            </section>
-
-            <section class="contact">
-               <div class="contact__wrapper">
-                  <h2 class="contact__heading">Get In Touch</h2>
-                  <p class="contact__text">
-                     Hey there, my inbox is always open. Whether you have a
-                     question or just want to say hi, I'll try my best to get
-                     back to you!
-                  </p>
-                  <form class="contact__form" action="form.php" method="POST">
-                     <div class="contact__form-group">
-                        <label for="name" class="contact__form-label"
-                           >Your Name</label
-                        >
-                        <input
-                           class="contact__form-input"
-                           type="text"
-                           id="name"
-                           name="name"
-                           placeholder="Enter your name"
-                           required />
-                        <!-- </div>
+            <article id="contactme">
+               <h3 class="container-heading">Contact Me</h3>
+               <section class="contact">
+                  <div class="contact__wrapper">
+                     <h2 class="contact__heading">Get In Touch</h2>
+                     <p class="contact__text">
+                        Hey there, my inbox is always open. Whether you have a
+                        question or just want to say hi, I'll try my best to get
+                        back to you!
+                     </p>
+                     <form
+                        class="contact__form"
+                        action="form.php"
+                        method="POST">
+                        <div class="contact__form-group">
+                           <label for="name" class="contact__form-label"
+                              >Your Name</label
+                           >
+                           <input
+                              class="contact__form-input"
+                              type="text"
+                              id="name"
+                              name="name"
+                              placeholder="Enter your name"
+                              required />
+                           <!-- </div>
                      <div class="contact__form-group"> -->
-                        <label for="email" class="contact__form-label"
-                           >Email adress</label
-                        >
-                        <input
-                           class="contact__form-input"
-                           type="email"
-                           id="email"
-                           name="email"
-                           placeholder="Enter your email adress"
-                           required />
-                        <!-- </div>
+                           <label for="email" class="contact__form-label"
+                              >Email adress</label
+                           >
+                           <input
+                              class="contact__form-input"
+                              type="email"
+                              id="email"
+                              name="email"
+                              placeholder="Enter your email adress"
+                              required />
+                           <!-- </div>
                      <div class="contact__form-group"> -->
-                        <label for="subject" class="contact__form-label"
-                           >Subject</label
-                        >
-                        <input
-                           class="contact__form-input"
-                           type="text"
-                           id="subject"
-                           name="subject"
-                           placeholder="Subject"
-                           required />
-                        <!-- </div>
+                           <label for="subject" class="contact__form-label"
+                              >Subject</label
+                           >
+                           <input
+                              class="contact__form-input"
+                              type="text"
+                              id="subject"
+                              name="subject"
+                              placeholder="Subject"
+                              required />
+                           <!-- </div>
                      <div class="contact__form-group"> -->
-                        <label for="message" class="contact__form-label"
-                           >Message</label
-                        >
-                        <textarea
-                           class="contact__form-input contact__form-textarea"
-                           id="message"
-                           name="message"
-                           rows="5"
-                           placeholder="Type your message..."
-                           required></textarea>
-                     </div>
-                     <input
-                        type="submit"
-                        class="contact__form-button"
-                        name="submit"
-                        value="Send Message" />
-                  </form>
-               </div>
-            </section>
+                           <label for="message" class="contact__form-label"
+                              >Message</label
+                           >
+                           <textarea
+                              class="contact__form-input contact__form-textarea"
+                              id="message"
+                              name="message"
+                              rows="5"
+                              placeholder="Type your message..."
+                              required></textarea>
+                        </div>
+                        <input
+                           type="submit"
+                           class="contact__form-button"
+                           name="submit"
+                           value="Send Message" />
+                     </form>
+                  </div>
+               </section>
+            </article>
          </main>
 
          <footer>

@@ -1,4 +1,5 @@
 @use "fonts";
+@use "header";
 
 $main-txt-color: #000;
 
@@ -13,24 +14,46 @@ main {
    align-items: center;
 
    &__heading {
-      font-size: 5.125rem;
+      font-size: 5rem;
       margin: 0;
    }
 
    &__subheading {
-      font-size: 3.125rem;
+      font-size: 3rem;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
    }
 
    &__image {
       border-radius: 50%;
-      right: 18%;
-      bottom: -40px;
       width: auto;
       max-width: 300px;
       height: auto;
       max-height: 300px;
       border: 1px solid #333;
    }
+}
+
+.icon_link {
+   color: #333;
+   &:hover {
+      color: header.$hover-color;
+   }
+   &:focus {
+      color: header.$focus-color;
+   }
+   &:active {
+      color: header.$active-color;
+   }
+}
+
+.fa-brands {
+   font-size: 4rem;
+   margin: 0 8px 48px 0;
 }
 
 .container-heading {
