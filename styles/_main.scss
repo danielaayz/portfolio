@@ -5,13 +5,13 @@ $main-txt-color: #000;
 
 main {
    width: 67%;
-   margin-top: 24vh;
+   margin-top: 20vh;
 }
 
 .intro {
    display: flex;
    justify-content: space-around;
-   align-items: center;
+   align-items: flex-end;
 
    &__heading {
       font-size: 5rem;
@@ -68,7 +68,7 @@ main {
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin: 60px 0;
+   margin: 96px 0 60px 0;
 
    &__card {
       display: flex;
