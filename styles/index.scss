@@ -26,3 +26,14 @@ body {
    align-items: center;
    margin: 0 auto;
 }
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+   .wrapper {
+      width: 90%;
+   }
+
+   main {
+      width: 100%;
+   }
+}

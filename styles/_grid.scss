@@ -137,3 +137,36 @@
    font-size: 14px;
    color: #666;
 }
+
+/* Tablets and iPads */
+@media (min-width: 481px) and (max-width: 1200px) {
+   .projects {
+      &__grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+         grid-template-rows: auto;
+         grid-template-areas:
+            "item1 item1"
+            "item2 item3"
+            "item4 item4";
+         gap: 0rem;
+      }
+   }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+   .projects {
+      &__grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+         grid-template-rows: auto;
+         grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4";
+         gap: 0rem;
+      }
+   }
+}
