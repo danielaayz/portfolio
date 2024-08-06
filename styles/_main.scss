@@ -124,8 +124,14 @@ main {
          font-size: 3rem;
       }
 
-      &__subheading {
+      &__subheading:not(:last-child) {
          display: none;
+      }
+
+      &__subheading {
+         font-size: 1rem;
+         color: #606060;
+         margin-top: 8px;
       }
 
       &__content {
@@ -136,10 +142,14 @@ main {
          width: 150px;
          height: 150px;
       }
+
+      &__links {
+         margin-top: 32px;
+      }
    }
 
    .fa-brands {
-      margin: 0 8px 16px 0;
+      margin: 0 16px 0 0;
    }
 
    main {
