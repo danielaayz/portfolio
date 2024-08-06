@@ -103,3 +103,19 @@ main {
 @import "grid";
 @import "experience";
 @import "contact";
+
+// iPads and tablets
+@media (min-width: 481px) and (max-width: 1200px) {
+   .intro {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+// mobile devices
+@media (max-width: 480px) {
+   .intro {
+      display: flex;
+      flex-direction: column;
+   }
+}
