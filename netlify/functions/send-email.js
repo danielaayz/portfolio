@@ -7,8 +7,8 @@ exports.handler = async (event, context) => {
    let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-         user: process.env.GMAIL_USER, // Din Gmail-adress från miljövariabel
-         pass: process.env.GMAIL_PASS, // Ditt Gmail-lösenord eller app-lösenord från miljövariabel
+         user: process.env.GMAIL_USER,
+         pass: process.env.GMAIL_PASS,
       },
    });
 
