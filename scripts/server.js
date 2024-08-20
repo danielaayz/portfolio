@@ -1,16 +1,19 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
+const path = require("path"); // Lägg till detta
 const app = express();
 require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(express.static("portfolio"));
+// Middleware för att servera statiska filer från rotmappen
+app.use(express.static(path.join(__dirname, ".."))); // Peka på rotmappen
+
+// Middleware för att parsning av JSON
 app.use(express.json());
 
 app.get("/", (req, res) => {
-   res.sendFile(__dirname + "/portfolio/index.html");
+   res.sendFile(path.join(__dirname, "..", "index.html")); // Använd path.join för att hantera sökvägar
 });
 
 app.post("/", (req, res) => {
