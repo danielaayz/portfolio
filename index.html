@@ -507,9 +507,11 @@
                         back to you!
                      </p>
                      <form
+                        id="contact-form"
                         class="contact__form"
-                        action="/.netlify/functions/send-email"
-                        method="POST">
+                        action="/send"
+                        method="POST"
+                        enctype="multipart/form-data">
                         <div class="contact__form-group">
                            <label for="name" class="contact__form-label"
                               >Your Name</label
@@ -614,10 +616,10 @@
                Copyright © 2024 Daniela Y. Zagal. All rights reserved.
             </p>
          </footer>
-         <script src="./scripts/index.js"></script>
-         <script src="./scripts/card.js"></script>
-         <script src="./scripts/navmenu.js"></script>
-         <script src="./scripts/app.js"></script>
+         <script src="/scripts/index.js"></script>
+         <script src="/scripts/card.js"></script>
+         <script src="/scripts/navmenu.js"></script>
+         <script src="/scripts/sendEmail.js"></script>
       </div>
    </body>
 </html>
