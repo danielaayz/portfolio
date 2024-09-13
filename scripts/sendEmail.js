@@ -8,6 +8,10 @@ form.addEventListener("submit", (event) => {
 
    let mail = new FormData(form);
 
+   for (let pair of mail.entries()) {
+      console.log(pair[0] + ": " + pair[1]);
+   }
+
    fetch("/send", {
       method: "POST",
       body: mail,
