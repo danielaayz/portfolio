@@ -18,13 +18,13 @@ exports.handler = async (event, context) => {
 
    console.log("Received data:", { name, email, subject, message }); // Loggar inkommande data
 
-   // Kontrollera om något fält saknas
-   if (!name || !email || !subject || !message) {
-      return {
-         statusCode: 400,
-         body: "All fields are required.",
-      };
-   }
+   // // Kontrollera om något fält saknas
+   // if (!name || !email || !subject || !message) {
+   //    return {
+   //       statusCode: 400,
+   //       body: "All fields are required.",
+   //    };
+   // }
 
    // Konfigurera Nodemailer
    const transporter = nodemailer.createTransport({
@@ -44,6 +44,13 @@ exports.handler = async (event, context) => {
    };
 
    try {
+      // Kontrollera om något fält saknas
+      if (!name || !email || !subject || !message) {
+         return {
+            statusCode: 400,
+            body: "All fields are required.",
+         };
+      }
       // Skicka e-post
       await transporter.sendMail(mail);
       return {
