@@ -53,6 +53,13 @@ exports.handler = async (event, context) => {
       }
       // Skicka e-post
       await transporter.sendMail(mail);
+      // Kontrollera om något fält saknas
+      if (!name || !email || !subject || !message) {
+         return {
+            statusCode: 400,
+            body: "All fields are required.",
+         };
+      }
       return {
          statusCode: 200,
          body: "Your message has been successfully sent!",
