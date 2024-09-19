@@ -1,3 +1,9 @@
+// Ta emot POST-begäran som skickas från frontend, extrahera formulärdata och skicka e-post med nodemailer
+
+require("dotenv").config({ path: "../.env" });
+
+console.log("send.js is running");
+
 const nodemailer = require("nodemailer");
 
 exports.handler = async (event, context) => {
@@ -8,6 +14,8 @@ exports.handler = async (event, context) => {
       };
    }
 
+   console.log("Raw event body:", event.body);
+
    // Parsar formdata från inkommande POST-förfrågan
    const formData = new URLSearchParams(event.body);
 
@@ -16,15 +24,15 @@ exports.handler = async (event, context) => {
    const subject = formData.get("subject");
    const message = formData.get("message");
 
-   console.log("Received data:", { name, email, subject, message }); // Loggar inkommande data
+   console.log("Parsed data:", { name, email, subject, message }); // Loggar inkommande data
 
-   // // Kontrollera om något fält saknas
-   // if (!name || !email || !subject || !message) {
-   //    return {
-   //       statusCode: 400,
-   //       body: "All fields are required.",
-   //    };
-   // }
+   // Kontrollera om något fält saknas
+   if (!name || !email || !subject || !message) {
+      return {
+         statusCode: 400,
+         body: "All fields are required.",
+      };
+   }
 
    // Konfigurera Nodemailer
    const transporter = nodemailer.createTransport({
@@ -44,22 +52,9 @@ exports.handler = async (event, context) => {
    };
 
    try {
-      // Kontrollera om något fält saknas
-      if (!name || !email || !subject || !message) {
-         return {
-            statusCode: 400,
-            body: "All fields are required.",
-         };
-      }
       // Skicka e-post
       await transporter.sendMail(mail);
       // Kontrollera om något fält saknas
-      if (!name || !email || !subject || !message) {
-         return {
-            statusCode: 400,
-            body: "All fields are required.",
-         };
-      }
       return {
          statusCode: 200,
          body: "Your message has been successfully sent!",
@@ -72,3 +67,18 @@ exports.handler = async (event, context) => {
       };
    }
 };
+
+// Simulera en HTTP POST-begäran
+exports
+   .handler({
+      httpMethod: "POST",
+      body: new URLSearchParams({
+         name: "Test User",
+         email: "test@example.com",
+         subject: "Test Subject",
+         message: "This is a test message.",
+      }).toString(),
+   })
+   .then((response) => {
+      console.log("Response:", response);
+   });
