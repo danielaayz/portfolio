@@ -8,26 +8,45 @@ const closeBtn = document.querySelector(".close");
 form.addEventListener("submit", (event) => {
    event.preventDefault();
 
-   let mail = new FormData(form);
+   let mailData = new URLSearchParams(new FormData(form)).toString();
 
-   for (let pair of mail.entries()) {
-      console.log(pair[0] + ": " + pair[1]);
-   }
+   //let mail = new FormData(form);
 
-   fetch("/send", {
+   // for (let pair of mail.entries()) {
+   //    console.log(pair[0] + ": " + pair[1]);
+   // }
+
+   fetch("/.netlify/functions/send", {
       // Skickar POST-förfrågan till servern
       method: "POST",
-      body: mail, // Skickar formdata (name, email, subject, message)
+      headers: {
+         "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: mailData, // Skickar formdata (name, email, subject, message)
    })
-      .then((response) => response.text()) // Behandlar svaret från servern
+      .then((response) => {
+         if (!response.ok) {
+            throw new Error(`Server error: ${response.status}`);
+         }
+         return response.text();
+      })
       .then((result) => {
          console.log(result);
-         showModal(result); // Visar modal med serverns svar
+         showModal(result);
       })
       .catch((error) => {
          console.error("Error:", error);
          showModal("Failed to send email");
       });
+   // .then((response) => response.text()) // Behandlar svaret från servern
+   // .then((result) => {
+   //    console.log(result);
+   //    showModal(result); // Visar modal med serverns svar
+   // })
+   // .catch((error) => {
+   //    console.error("Error:", error);
+   //    showModal("Failed to send email");
+   // });
 });
 
 // Function to show the modal
